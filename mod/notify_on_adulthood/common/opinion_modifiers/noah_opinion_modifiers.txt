@@ -1,0 +1,4 @@
+opinion_notify_on_adulthood = {
+    opinion = 0
+    inherit = yes
+}

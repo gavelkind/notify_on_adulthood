@@ -1,0 +1,43 @@
+namespace = noah
+
+# Fired on_adulthood
+character_event = {
+    id = noah.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        # NB: reversing the meaning of the opinion modifier would allow using
+        # the more efficient any_opinion_modifier_target. Unfortunately, it would
+        # make "inherit = yes" do the opposite of what we want.
+
+        any_playable_ruler = {
+            limit = {
+                has_opinion_modifier = {
+                    who = ROOT
+                    modifier = opinion_notify_on_adulthood
+                }
+            }
+            character_event = { id = noah.2 }
+        }
+    }
+}
+
+character_event = {
+    id = noah.2
+    is_triggered_only = yes
+
+    picture = GFX_evt_child_reading
+    desc = "noah.reached_adulthood"
+
+    immediate = {
+        remove_opinion = {
+            who = FROM
+            modifier = opinion_notify_on_adulthood
+        }
+    }
+
+    option = {
+        name = "noah.okay"
+    }
+}

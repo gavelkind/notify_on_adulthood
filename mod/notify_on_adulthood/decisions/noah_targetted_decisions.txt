@@ -1,0 +1,77 @@
+targetted_decisions = {
+
+    notify_on_adulthood = {
+        ai_target_filter = court
+
+        from_potential = {
+            ai = no
+        }
+        potential = {
+            is_adult = no
+            NOT = {
+                FROM = {
+                    has_opinion_modifier = {
+                        who = ROOT
+                        name = opinion_notify_on_adulthood
+                    }
+                }
+            }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            hidden_tooltip = {
+                FROM = {
+                    opinion = {
+                        who = ROOT
+                        modifier = opinion_notify_on_adulthood
+                        months = 1200
+                    }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    dont_notify_on_adulthood = {
+        ai_target_filter = court
+
+        from_potential = {
+            ai = no
+        }
+        potential = {
+            FROM = {
+                has_opinion_modifier = {
+                    who = ROOT
+                    name = opinion_notify_on_adulthood
+                }
+            }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            hidden_tooltip = {
+                FROM = {
+                    remove_opinion = {
+                        who = ROOT
+                        modifier = opinion_notify_on_adulthood
+                    }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+# Targeted decisions
+notify_on_adulthood;Notify on adulthood;;;;;;;;;x
+notify_on_adulthood_named;Notify me when [Root.GetTitledFirstName] becomes an adult.;;;;;;;;;;;;;x
+notify_on_adulthood_desc;You will be notified when [Root.GetTitledFirstName] becomes an adult.;;;;;;;;;;;;;x
+
+dont_notify_on_adulthood;Do not notify on adulthood;;;;;;;;;x
+dont_notify_on_adulthood_named;Do not me when [Root.GetTitledFirstName] becomes an adult.;;;;;;;;;;;;;x
+dont_notify_on_adulthood_desc;You will not be notified when [Root.GetTitledFirstName] becomes an adult.;;;;;;;;;;;;;x
+
+# Events
+noah.reached_adulthood;[From.GetTitledFirstName] is now a grown [From.GetManWoman].;;;;;;;;;;;;;x
+noah.okay;OK;;;;;;;;;;;;;x
