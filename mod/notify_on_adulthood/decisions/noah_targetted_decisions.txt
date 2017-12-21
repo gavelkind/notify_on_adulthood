@@ -74,4 +74,78 @@ targetted_decisions = {
         }
     }
 
+    notify_on_adolescence = {
+        ai_target_filter = court
+
+        from_potential = {
+            ai = no
+            has_dlc = "Conclave"
+        }
+        potential = {
+            NOT = { age = 12 }
+            NOT = {
+                FROM = {
+                    has_opinion_modifier = {
+                        who = ROOT
+                        name = opinion_notify_on_adolescence
+                    }
+                }
+            }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            hidden_tooltip = {
+                FROM = {
+                    opinion = {
+                        who = ROOT
+                        modifier = opinion_notify_on_adolescence
+                        months = 1200
+                    }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    dont_notify_on_adolescence = {
+        ai_target_filter = court
+
+        from_potential = {
+            ai = no
+        }
+        potential = {
+            FROM = {
+                has_opinion_modifier = {
+                    who = ROOT
+                    name = opinion_notify_on_adolescence
+                }
+            }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            hidden_tooltip = {
+                FROM = {
+                    remove_opinion = {
+                        who = ROOT
+                        modifier = opinion_notify_on_adolescence
+                    }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }

@@ -3,3 +3,9 @@ on_adulthood = {
         noah.1
     }
 }
+
+on_adolescence = {
+    events = {
+        noah.11
+    }
+}

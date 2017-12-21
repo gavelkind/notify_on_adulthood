@@ -2,3 +2,8 @@ opinion_notify_on_adulthood = {
     opinion = 0
     inherit = yes
 }
+
+opinion_notify_on_adolescence = {
+    opinion = 0
+    inherit = yes
+}
